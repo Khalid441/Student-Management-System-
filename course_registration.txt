@@ -1,0 +1,14 @@
+Student ID: 2307077
+Registered Courses:
+  - CSE 1201 - Programming Language I
+  - CSE 1202 - Discrete Mathematics
+  - CSE 1203 - Structured Programming
+  - CSE 1204 - Structured Programming Lab
+  - EEE 1207 - Electrical Circuits
+  - EEE 1208 - Electrical Circuits Lab
+  - MATH 1207 - Differential Calculus
+  - CHEM 1207 - Engineering Chemistry
+  - CHEM 1208 - Engineering Chemistry Lab
+  - HUM 1207 - English Language
+Registration Date: Oct  1 2025 13:59:40
+------------------------------

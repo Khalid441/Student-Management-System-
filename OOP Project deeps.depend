@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1759304664 source:d:\excercise2.0\rafi\oop project deeps\main.cpp
+	"header.h"
+
+1759305573 d:\excercise2.0\rafi\oop project deeps\header.h
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	<string>
+	<vector>
+	<iomanip>
+	<thread>
+	<chrono>
+	<windows.h>
+	<conio.h>
+
+1759305561 source:d:\excercise2.0\rafi\oop project deeps\functions.cpp
+	"header.h"
+
+1759305569 source:d:\excercise2.0\rafi\oop project deeps\student_operations.cpp
+	"header.h"
+	<algorithm>
+	<cctype>
+
