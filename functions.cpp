@@ -10,6 +10,15 @@ void scrolltext(const string &str) {
         #endif
     }
 }
+void pressAnyKey() {
+    cout << "\n\tPress any key to continue...";
+    #ifdef _WIN32
+    _getch();  // Windows - waits for any key
+    #else
+    getchar(); // Linux/Mac - waits for Enter key
+    #endif
+}
+
 
 void takeinput(string &input) {
     getline(cin, input);
@@ -108,7 +117,7 @@ int registration() {
             }
             cout << "\n\t\tRegistration successful!\n";
             cout << "\t\tYour ID is your roll number: " << roll << "\n";
-            system("pause");
+            pressAnyKey();
             return login();
         }
 
@@ -159,7 +168,7 @@ int registration() {
                 #endif
             }
             cout << "\n\t\tRegistration successful!\n";
-            system("pause");
+            pressAnyKey();
             return login();
         }
 
@@ -210,7 +219,8 @@ int login() {
                             #endif
                         }
                         cout << "\n\t\tLogin successful!\n";
-                        system("pause");
+                                    pressAnyKey();
+
                         return options(id, password);
                     } else {
                         file.close();
@@ -230,7 +240,8 @@ int login() {
                 Beep(823, 500);
                 #endif
             }
-            system("pause");
+                        pressAnyKey();
+
             return login();
         }
 
@@ -259,7 +270,8 @@ int login() {
                             #endif
                         }
                         cout << "\n\t\tLogin successful!\n";
-                        system("pause");
+                                    pressAnyKey();
+
                         return optiont(email, password);
                     } else {
                         file.close();
@@ -293,3 +305,4 @@ int login() {
             return login();
     }
 }
+
