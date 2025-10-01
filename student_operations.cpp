@@ -32,7 +32,8 @@ int options(const string& fid, const string& password) {
                     found = true;
                     fin.close();
                     u.display();
-                    system("pause");
+                                pressAnyKey();
+
                     return options(fid, password);
                 }
             }
@@ -40,7 +41,8 @@ int options(const string& fid, const string& password) {
             if (!found) {
                 cout << "\t\tUser not found!\n";
             }
-            system("pause");
+                        pressAnyKey();
+
             return options(fid, password);
         }
 
@@ -75,7 +77,8 @@ int options(const string& fid, const string& password) {
                     break;
                 default:
                     cout << "\tInvalid choice!\n";
-                    system("pause");
+                                pressAnyKey();
+
             }
             return options(fid, password);
         }
@@ -119,7 +122,8 @@ int stdresult(const string& fid) {
     ifstream fp("gpa.txt");
     if (!fp) {
         cerr << "Error opening file" << endl;
-        system("pause");
+                    pressAnyKey();
+
         return 1;
     }
 
@@ -152,8 +156,8 @@ int stdresult(const string& fid) {
     if (!found) {
         cout << "\tNo result found for ID: " << fid << "\n";
     }
+            pressAnyKey();
 
-    system("pause");
     return 0;
 }
 
@@ -193,7 +197,8 @@ int gpcal() {
     ofstream fp("gpa.txt", ios::app);
     if (!fp) {
         cerr << "Error opening file" << endl;
-        system("pause");
+                    pressAnyKey();
+
         return 1;
     }
 
@@ -202,7 +207,8 @@ int gpcal() {
     fp << " " << gpa << "\n";
 
     fp.close();
-    system("pause");
+                pressAnyKey();
+
     return 0;
 }
 
@@ -277,7 +283,8 @@ int course_reg(const string& fid) {
                 }
                 cout << "\n\t✗ " << courses[courseIndex] << " removed from selection.\n";
             }
-            system("pause");
+                        pressAnyKey();
+
         }
         else if (choice == (int)courses.size() + 1) {
             // Register selected courses
@@ -307,14 +314,16 @@ int course_reg(const string& fid) {
                 }
                 registering = false;
             }
-            system("pause");
+                        pressAnyKey();
+
         }
         else if (choice == (int)courses.size() + 2) {
             // Clear selection
             registeredCourses.clear();
             fill(selected.begin(), selected.end(), false);
             cout << "\n\tAll course selections cleared.\n";
-            system("pause");
+                        pressAnyKey();
+
         }
         else if (choice == (int)courses.size() + 3) {
             // Exit
@@ -336,7 +345,8 @@ int course_reg(const string& fid) {
         }
         else {
             cout << "\n\tInvalid choice! Please try again.\n";
-            system("pause");
+                        pressAnyKey();
+
         }
     }
 
@@ -352,7 +362,8 @@ int view_registered_courses(const string& fid) {
     if (!file) {
         cout << "\tNo course registration found.\n";
         cout << "\tPlease register for courses first.\n";
-        system("pause");
+                    pressAnyKey();
+
         return 0;
     }
 
@@ -379,8 +390,8 @@ int view_registered_courses(const string& fid) {
         cout << "\tNo course registration found for your ID.\n";
         cout << "\tPlease register for courses first.\n";
     }
+            pressAnyKey();
 
-    system("pause");
     return 0;
 }
 
@@ -389,7 +400,8 @@ int editstdinfo(const string& fid, const string& password) {
     system("cls");
     cout << "\t\tEdit Student Information\n\n";
     cout << "\t\tFeature coming soon for ID: " << fid << "\n";
-    system("pause");
+                pressAnyKey();
+
     return 0;
 }
 
@@ -397,7 +409,8 @@ int dlt(const string& fid, const string& password) {
     system("cls");
     cout << "\t\tDelete Account\n\n";
     cout << "\t\tFeature coming soon for ID: " << fid << "\n";
-    system("pause");
+                pressAnyKey();
+
     return 0;
 }
 
@@ -406,7 +419,8 @@ int optiont(const string& femail, const string& password) {
     cout << "\t\tTeacher Dashboard\n\n";
     cout << "\t\tWelcome Teacher: " << femail << "\n";
     cout << "\t\tTeacher features coming soon!\n";
-    system("pause");
+                pressAnyKey();
+
     return 0;
 }
 
@@ -414,6 +428,8 @@ int edittcrinfo(const string& femail, const string& password) {
     system("cls");
     cout << "\t\tEdit Teacher Information\n\n";
     cout << "\t\tFeature coming soon for email: " << femail << "\n";
-    system("pause");
+                pressAnyKey();
+
     return 0;
 }
+
