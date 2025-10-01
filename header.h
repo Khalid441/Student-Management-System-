@@ -17,7 +17,7 @@
 #endif
 
 using namespace std;
-
+void pressAnyKey();
 class User {
 private:
     string name;
